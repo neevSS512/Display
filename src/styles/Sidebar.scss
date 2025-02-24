@@ -1,0 +1,407 @@
+
+
+// .sidebar {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 330px;
+//   height: 100%;
+//   background-color: #0b151f;
+//   color: #fff;
+//   display: flex;
+//   flex-direction: column;
+//   transition: all 0.3s ease;
+//   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+//   z-index: 9999;
+//   padding-bottom: 30px; /* Add some padding for the bottom */
+// }
+
+// .sidebar.closed {
+//   width: 80px; /* Narrow width when closed */
+// }
+
+// .sidebar-header {
+//   display: flex;
+//   justify-content: flex-end;
+//   padding: 15px;
+// }
+
+// .toggle-btn {
+//   background-color: transparent;
+//   border: none;
+//   cursor: pointer;
+//   outline: none;
+//   padding: 10px;
+//   transition: transform 0.3s ease;
+// }
+
+// .arrow {
+//   width: 15px;
+//   height: 15px;
+//   border-top: 2px solid #fff;
+//   border-right: 2px solid #fff;
+//   transform: rotate(45deg);
+//   transition: transform 0.3s ease;
+// }
+
+// .arrow.left {
+//   transform: rotate(-45deg); /* Arrow pointing left when open */
+// }
+
+// .arrow.right {
+//   transform: rotate(135deg); /* Arrow pointing right when closed */
+// }
+
+// .nav-menu {
+//   flex-grow: 1;
+//   padding-top: 30px;
+//   overflow-y: auto; /* Allow vertical scrolling for the menu if needed */
+// }
+
+// .nav-menu ul {
+//   list-style-type: none;
+//   padding-left: 0;
+// }
+
+// .nav-menu ul li {
+//   margin: 5px 0;
+// }
+
+// .nav-menu ul li a {
+//   display: flex;
+//   align-items: center;
+//   padding: 10px;
+//   text-decoration: none;
+//   color: #ecf0f1;
+//   font-size: 1.1rem;
+//   transition: background-color 0.3s ease;
+//   border-radius: 4px;
+// }
+
+// .nav-menu ul li a:hover {
+//   background-color: #34495e;
+//   width: 70%;
+//   padding: 8px 10px; /* Reduce the padding to decrease the height of the background color */
+//   border-radius: 18px;
+// }
+
+// .nav-menu ul li a .icon {
+//   margin-right: 10px; /* Reduced margin-right between icon and title */
+//   font-size: 1.3rem;
+// }
+
+// .nav-menu ul li a .title {
+//   font-size: 1rem;
+//   transition: opacity 0.3s ease;
+//   margin-left: 0px; /* Reduced margin-left for titles */
+// }
+
+// .nav-menu ul li a:hover .title {
+//   font-weight: bold;
+// }
+
+// .sub-menu {
+//   list-style: none;
+//   padding-left: 0;
+//   display: none; /* Hide the sub-menu by default */
+// }
+
+// .sub-menu li {
+//   padding: 5px 0; /* Reduced padding */
+//   margin: 0; /* Remove margin */
+// }
+
+// .sub-menu li a {
+//   display: flex;
+//   justify-content: flex-start; /* Align items to the left */
+//   align-items: center;
+//   padding: 10px 10px;
+//   text-decoration: none;
+//   color: #ecf0f1;
+//   font-size: 1rem;
+//   transition: background-color 0.3s ease;
+//   border-radius: 4px;
+// }
+
+// .sub-menu li a .icon {
+//   margin-left: 50px; /* Reduced margin-left for sub-menu icons */
+//   font-size: 1.3rem;
+// }
+
+// .sub-menu li a .title {
+//   margin-left: 5px; /* Reduced margin-left for sub-menu titles */
+//   font-size: 1rem;
+//   transition: opacity 0.3s ease;
+// }
+
+// /* Hover effect for subitems */
+// .sub-menu li a:hover {
+//   background-color: #34495e;
+//   width: 70%; /* Same width change as the main items */
+//   padding: 8px 10px; /* Reduced padding for sub-items */
+//   border-radius: 18px;
+// }
+
+// .sub-menu li a:hover .title {
+//   font-weight: bold;
+// }
+
+// .nav-menu ul li.active .sub-menu {
+//   display: block; /* Show sub-menu when item is active */
+// }
+
+// .nested-sub-menu li {
+//   margin-left: 20px; /* Add left margin to nested sub-items */
+//   padding: 5px 0;
+// }
+
+// .nested-sub-menu li a {
+//   padding: 10px;
+//   text-decoration: none;
+//   color: #ecf0f1;
+//   font-size: 1rem;
+//   transition: background-color 0.3s ease;
+//   border-radius: 4px;
+// }
+
+// .nested-sub-menu li a:hover {
+//   background-color: #34495e;
+//   width: 70%;
+//     padding: 8px 10px; /* Reduced padding for nested sub-items */
+//   border-radius: 18px;
+// }
+
+// .nested-sub-menu li a .icon {
+//   margin-left: 110px; /* Reduced margin-left for nested sub-menu icons */
+// }
+
+// .nested-sub-menu li a .title {
+//   margin-left: 5px; /* Reduced margin-left for nested sub-menu titles */
+//   font-size: 1rem;
+//   transition: opacity 0.3s ease;
+// }
+
+// /* Optional: Adding media query for responsive sidebar */
+// @media (max-width: 768px) {
+//   .sidebar {
+//     width: 100%; /* Full width on smaller screens */
+//   }
+
+//   .sidebar.closed {
+//     width: 60px;
+//   }
+
+//   .nav-menu ul li a {
+//     justify-content: center;
+//   }
+
+//   .nav-menu ul li a .title {
+//     display: none;
+//   }
+// }
+
+
+
+
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 246px;
+  height: 100%;
+  background-color: #0b151f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  padding-bottom: 30px; /* Add some padding for the bottom */
+}
+
+.sidebar.closed {
+  width: 80px; /* Narrow width when closed */
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+}
+
+.toggle-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.arrow {
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.arrow.left {
+  transform: rotate(-45deg); /* Arrow pointing left when open */
+}
+
+.arrow.right {
+  transform: rotate(135deg); /* Arrow pointing right when closed */
+}
+
+.nav-menu {
+  flex-grow: 1;
+  padding-top: 30px;
+  overflow-y: auto; /* Allow vertical scrolling for the menu if needed */
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.nav-menu ul li {
+  margin: 5px 0;
+}
+
+.nav-menu ul li a {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px; /* Use 20px padding to maintain uniformity */
+  text-decoration: none;
+  color: #ecf0f1;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  border-radius: 4px;
+  width: 100%; /* Ensure the item takes the full width of the container */
+}
+
+.nav-menu ul li a:hover {
+  background-color: #34495e;
+  padding: 8px 20px; /* Reduced padding on hover */
+  border-radius: 18px;
+  width:65%
+}
+
+.nav-menu ul li a .icon {
+  margin-right: 10px; /* Reduced margin-right between icon and title */
+  font-size: 1.3rem;
+}
+
+.nav-menu ul li a .title {
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
+  margin-left: 0px; /* Reduced margin-left for titles */
+}
+
+.nav-menu ul li a:hover .title {
+  font-weight: bold;
+}
+
+.sub-menu {
+  list-style: none;
+  padding-left: 0;
+  display: none; /* Hide the sub-menu by default */
+}
+
+.sub-menu li {
+  padding: 5px 0; /* Reduced padding */
+  margin: 0; /* Remove margin */
+}
+
+.sub-menu li a {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center;
+  padding: 10px 20px; /* Use consistent padding for sub-menu items */
+  text-decoration: none;
+  color: #ecf0f1;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  border-radius: 4px;
+}
+
+.sub-menu li a .icon {
+  margin-left: 50px; /* Reduced margin-left for sub-menu icons */
+  font-size: 1.3rem;
+}
+
+.sub-menu li a .title {
+  margin-left: 5px; /* Reduced margin-left for sub-menu titles */
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover effect for subitems */
+.sub-menu li a:hover {
+  background-color: #34495e;
+  padding: 8px 20px; /* Keep consistent padding on hover */
+  border-radius: 18px;
+  width:65%
+}
+
+.sub-menu li a:hover .title {
+  font-weight: bold;
+}
+
+.nav-menu ul li.active .sub-menu {
+  display: block; /* Show sub-menu when item is active */
+}
+
+.nested-sub-menu li {
+  margin-left: 20px; /* Add left margin to nested sub-items */
+  padding: 5px 0;
+}
+
+.nested-sub-menu li a {
+  padding: 10px 20px; /* Consistent padding for nested sub-menu items */
+  text-decoration: none;
+  color: #ecf0f1;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  border-radius: 4px;
+}
+
+.nested-sub-menu li a:hover {
+  background-color: #34495e;
+  padding: 8px 20px; /* Keep consistent padding on hover */
+  border-radius: 18px;
+  width:65%
+}
+
+.nested-sub-menu li a .icon {
+  margin-left: 110px; /* Adjust icon position */
+}
+
+.nested-sub-menu li a .title {
+  margin-left: 5px; /* Adjust margin for nested sub-menu titles */
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+/* Optional: Adding media query for responsive sidebar */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .sidebar.closed {
+    width: 60px;
+  }
+
+  .nav-menu ul li a {
+    justify-content: center;
+  }
+
+  .nav-menu ul li a .title {
+    display: none;
+  }
+}
