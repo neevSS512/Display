@@ -182,10 +182,10 @@ const buttonStyles = {
 
   return (
     <div className="neev">
-      <h3 className="ctr">
+      <h3 className="upa">
         Deal Details
-        <button className="btn-h" onClick={handleCreateRow}>Create Data</button>
-        <button className="btn-s"  onClick={handleSaveData}>Save Data</button>
+        <button className="btn-z" onClick={handleCreateRow}>Create Data</button>
+        <button className="btn-v"  onClick={handleSaveData}>Save Data</button>
       </h3>
 
       <table style={tableStyles}>

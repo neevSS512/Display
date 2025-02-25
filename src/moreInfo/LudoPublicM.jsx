@@ -505,7 +505,7 @@ const LudoPublicM = ({ user, handleClose }) => {
   
   return (
     <div className="neev">
-      <h3 className="ctr">
+      <h3 className="lpm">
         More Info About The Ludo Public
         <button 
           className="go-back-btn"

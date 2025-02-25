@@ -675,7 +675,7 @@ const LudoScoreData = () => {
 
   return (
     <div className="neev">
-      <h3 className="ctr">Ludo Public
+      <h3 className="lp">Ludo Public
 
 
       <button className="btn-w" onClick={handleCreateRow} >Create Data</button>
@@ -739,7 +739,7 @@ const LudoScoreData = () => {
     style={{
       width: '74px',
       height: '23px',
-      border: '1px solid transparent',  // Start with a transparent border
+      border: '1px solid transparent',  
       outline: 'none',
       backgroundColor: 'transparent',
       color: 'inherit',
@@ -784,7 +784,7 @@ const LudoScoreData = () => {
     style={{
       width: '74px',
       height: '23px',
-      border: '1px solid transparent',  // Start with a transparent border
+      border: '1px solid transparent',
       outline: 'none',
       backgroundColor: 'transparent',
       color: 'inherit',
@@ -805,7 +805,7 @@ const LudoScoreData = () => {
     style={{
       width: '74px',
       height: '23px',
-      border: '1px solid transparent',  // Start with a transparent border
+      border: '1px solid transparent',  
       outline: 'none',
       backgroundColor: 'transparent',
       color: 'inherit',

@@ -214,7 +214,7 @@ const tableStyles = {
 
   return (
     <div className="neev">
-      <h3 className="ctr">Ludo Counter
+      <h3 className="lc">Ludo Counter
 
 
       <button className="btn-f" onClick={handleCreateRow} >Create Data</button>

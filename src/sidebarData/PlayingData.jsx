@@ -178,7 +178,7 @@ const buttonStyles = {
 
   return (
     <div className="neev">
-      <h3 className="ctr">
+      <h3 className="upg">
          Playing Data
         <button className="btn-o" onClick={handleCreateRow}>Create Data</button>
         <button className="btn-p"  onClick={handleSaveData}>Save Data</button>

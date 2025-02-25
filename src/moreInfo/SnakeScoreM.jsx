@@ -114,7 +114,7 @@ const SnakeScoreM= ({ user, handleClose }) => {
   
   return (
     <div className="neev">
-      <h3 className="ctr">
+      <h3 className="ssm">
         More Info About The Snake Score
         <button 
           className="go-back-btn"
@@ -145,9 +145,6 @@ const SnakeScoreM= ({ user, handleClose }) => {
         </thead>
         <tbody>
           <tr>
-
-
-            
             <td style={tdStyles}>
 
 <input
@@ -163,8 +160,6 @@ const SnakeScoreM= ({ user, handleClose }) => {
   autoFocus // Automatically focus this input when the component is rendered
   onBlur={(e) => e.target.style.border = 'none'}
 />
-
-
             </td>
              
             <td style={tdStyles}>

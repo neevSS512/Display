@@ -136,7 +136,7 @@ const LudoScoreM= ({ user, handleClose }) => {
   
   return (
     <div className="neev">
-      <h3 className="ctr">
+      <h3 className="lsm">
         More Info About The Ludo Score
         <button 
           className="go-back-btn"

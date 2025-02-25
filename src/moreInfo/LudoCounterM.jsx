@@ -118,7 +118,7 @@ const LudoCounterM = ({ user, handleClose }) => {
   
   return (
     <div className="neev">
-      <h3 className="ctr">
+      <h3 className="lcm">
         More Info About The Ludo Counter
         <button 
           className="go-back-btn"

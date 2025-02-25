@@ -206,7 +206,7 @@ const LudoScoreData = () => {
 
   return (
     <div className="neev">
-      <h3 className="ctr">Ludo Score
+      <h3 className="ls">Ludo Score
 
 
       <button className="btn-h" onClick={handleCreateRow} >Create Data</button>

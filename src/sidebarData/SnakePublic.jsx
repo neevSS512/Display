@@ -206,7 +206,7 @@ const SnakeScoreData = () => {
 
   return (
     <div className="neev">
-      <h3 className="ctr">Snake Public
+      <h3 className="sp">Snake Public
 
 
       <button className="btn-w" onClick={handleCreateRow} >Create Data</button>

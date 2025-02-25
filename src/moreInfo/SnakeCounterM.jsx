@@ -112,7 +112,7 @@ const SnakeCounterM = ({ user, handleClose }) => {
   
   return (
     <div className="neev">
-      <h3 className="ctr">
+      <h3 className="scm">
         More Info About The Snake Counter
         <button 
           className="go-back-btn"

@@ -178,7 +178,7 @@ const buttonStyles = {
 
   return (
     <div className="neev">
-      <h3 className="ctr">
+      <h3 className="upd">
         Pool Data
         <button className="btn-A" onClick={handleCreateRow}>Create Data</button>
         <button className="btn-B"  onClick={handleSaveData}>Save Data</button>
