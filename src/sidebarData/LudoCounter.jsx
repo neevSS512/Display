@@ -217,8 +217,8 @@ const tableStyles = {
       <h3 className="ctr">Ludo Counter
 
 
-      <button className="btn-e" onClick={handleCreateRow} >Create Data</button>
-      <button className="btn-r" onClick={handleSaveData} >Save Data</button>
+      <button className="btn-f" onClick={handleCreateRow} >Create Data</button>
+      <button className="btn-g" onClick={handleSaveData} >Save Data</button>
       </h3>
    
 

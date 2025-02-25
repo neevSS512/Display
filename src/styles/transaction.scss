@@ -23,27 +23,47 @@ $darkgrey: #969393;
 
 
 
-h3{
-    display:inline-block;
-    border: 1px solid black;
-    border-radius: 9px;
-    background-color: rgb(221, 221, 221);
-    width: 100%;
-    height: 50px;
-    margin-bottom: 12px;
-    margin-top: 12px;
+// h3{
+//     display:inline-block;
+//     border: 1px solid black;
+//     border-radius: 9px;
+//     background-color: rgb(221, 221, 221);
+//     height: 50px;
+//     margin-bottom: 12px;
+//     margin-top: 12px;
+// }
+
+// .ctr{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 80vw;
+// }
+h3 {
+  border: 1px solid black;
+  border-radius: 9px;
+  background-color: rgb(221, 221, 221);
+  width: 100%;              // Full width of the parent container
+  height: 50px;             // Fixed height for the element
+  margin-bottom: 12px;
+  margin-top: 12px;
+  text-align: center;       // Text alignment for fallback
 }
 
-.ctr{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.ut{
+  display: flex;
+  justify-content: center;  // Center horizontally
+  align-items: center;      // Center vertically
+  padding-top: 2px;         // Adjust the padding if needed
+  width: 80vw;          // Set specific width if necessary
+  margin-left: 230px;       // Adjust margin based on your layout
 
+}
 .withdraw-container {
     margin-bottom: 20px;
     border: 1px solid #ddd;
     padding: 15px;
+    
   }
   
   .withdraw-table {
@@ -64,7 +84,14 @@ h3{
     cursor: pointer;
   }
 
-
+  
+  .tableStyles{
+    width: 80vw;
+    border-collapse: collapse;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    margin-left: 230px;
+  };
 
   
   .navbar_search {
@@ -92,3 +119,25 @@ h3{
     }
   }
 
+  .notfound-message{
+    text-align: center;
+    color: #ff3b3b;
+    margin-top: 10px;
+    font-size: 18px;
+    width: 100%;
+    font-weight: bold;
+    margin-left: 200px; /* Adjust this margin to your desired left position */
+  }
+  .found-message{
+    text-align: center;
+    color: green;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    width: 100%;
+    font-weight: bold;
+    margin-left: 200px; /* Adjust this margin to your desired left position */
+  }
+  
+
+  

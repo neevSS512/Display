@@ -1,5 +1,4 @@
 
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import "../styles/snakecounterm.scss";
@@ -12,12 +11,11 @@ const SnakeCounterM = ({ user, handleClose }) => {
   // State to manage the updated user data
   const [updatedUser, setUpdatedUser] = useState(user);
 
-
-
   const handleGoBack = () => {
     localStorage.setItem("updatedUser", JSON.stringify(updatedUser));
     handleClose(); // Perform the close action
   };
+  
   
 
     useEffect(() => {
@@ -29,9 +27,6 @@ const SnakeCounterM = ({ user, handleClose }) => {
       setLoading(false);
     }
   }, [user]);
-  
-
-
 
   
 
@@ -52,7 +47,6 @@ const SnakeCounterM = ({ user, handleClose }) => {
       }));
     };
   
-  // Handle Update Data button click
   const handleUpdate = async (updatedUser) => {
     try {
       // Update the user data on the backend
@@ -150,9 +144,6 @@ const SnakeCounterM = ({ user, handleClose }) => {
         </thead>
         <tbody>
           <tr>
-
-
-            
             <td style={tdStyles}>
 
 <input
@@ -183,8 +174,6 @@ const SnakeCounterM = ({ user, handleClose }) => {
                 outline: 'none',
                 transition: 'border 0.3s ease',
                  }}
-           
-                // onFocus={(e) => e.target.style.border = '2px solid #3498db'} // Add border on focus
                 onBlur={(e) => e.target.style.border = 'none'} // Remove border when focus is lost
                 />
 
@@ -209,14 +198,11 @@ const SnakeCounterM = ({ user, handleClose }) => {
 </td>
 
 
-
-
-
             <td style={tdStyles}>
   <input
     type="text"
     name="isdelete"
-    value={updatedUser.isdelete !== undefined ? updatedUser.isdelete : ''}  // Make sure isdelete is a number or a string
+    value={updatedUser.isdelete !== undefined ? updatedUser.isdelete : ''}  
     onChange={handleChange}
     style={{
       border: 'none',
@@ -241,17 +227,14 @@ const SnakeCounterM = ({ user, handleClose }) => {
       height: "25px",
       borderRadius:"6px",
       textAlign: 'center',
-      backgroundColor: updatedUser._ip ? 'green' : 'red', // Set background color based on value
+      backgroundColor: updatedUser._ip ? 'green' : 'red', 
       outline: 'none',
       transition: 'border 0.3s ease',
     }}
     onClick={handleToggle }
-    // onFocus={(e) => e.target.style.border = '2px solid #3498db'}
     onBlur={(e) => e.target.style.border = 'none'}
   />
-</td>
-
-           
+</td>     
             <td style={tdStyles}>
             <input
                 type="text"
@@ -263,7 +246,6 @@ const SnakeCounterM = ({ user, handleClose }) => {
                 outline: 'none',
                 transition: 'border 0.3s ease',
                  }}
-                // onFocus={(e) => e.target.style.border = '2px solid #3498db'} // Add border on focus
                 onBlur={(e) => e.target.style.border = 'none'} // Remove border when focus is lost
                 />
 
@@ -273,7 +255,7 @@ const SnakeCounterM = ({ user, handleClose }) => {
   <input
     type="text"
     name="play_store"
-    value={updatedUser.play_store ? 'Yes' : 'No'}  // Convert to string
+    value={updatedUser.play_store ? 'Yes' : 'No'} 
    
     style={{
       border: 'none',
@@ -281,7 +263,7 @@ const SnakeCounterM = ({ user, handleClose }) => {
       height: "25px",
       borderRadius:"6px",
       textAlign: 'center',
-      backgroundColor: updatedUser.play_store ? 'green' : 'red', // Set background color based on value
+      backgroundColor: updatedUser.play_store ? 'green' : 'red',
       outline: 'none',
       transition: 'border 0.3s ease',
     }}
@@ -295,23 +277,21 @@ const SnakeCounterM = ({ user, handleClose }) => {
   <input
     type="text"
     name="first_game"
-    value={updatedUser.first_game ? 'Yes' : 'No'}  // Convert to string
-   
+    value={updatedUser.first_game ? 'Yes' : 'No'} 
     style={{
       border: 'none',
       width: '60px',
       height: "25px",
       borderRadius:"6px",
       textAlign: 'center',
-      backgroundColor: updatedUser.first_game ? 'green' : 'red', // Set background color based on value
+      backgroundColor: updatedUser.first_game ? 'green' : 'red',
       outline: 'none',
       transition: 'border 0.3s ease',
     }}
     onClick={handleToggle }
     onBlur={(e) => e.target.style.border = 'none'}
   />
-</td>
-           
+</td>      
             <td style={tdStyles}>
             <input
                 type="text"
@@ -323,8 +303,8 @@ const SnakeCounterM = ({ user, handleClose }) => {
                 outline: 'none',
                 transition: 'border 0.3s ease',
                  }}
-                // onFocus={(e) => e.target.style.border = '2px solid #3498db'} // Add border on focus
-                onBlur={(e) => e.target.style.border = 'none'} // Remove border when focus is lost
+              
+                onBlur={(e) => e.target.style.border = 'none'} 
                 />
 
             </td>
@@ -349,7 +329,7 @@ const SnakeCounterM = ({ user, handleClose }) => {
   <input
     type="text"
     name="freeWinGame"
-    value={updatedUser.freeWinGame? 'Yes' : 'No'}  // Convert to string
+    value={updatedUser.freeWinGame? 'Yes' : 'No'} 
    
     style={{
      
@@ -358,7 +338,7 @@ const SnakeCounterM = ({ user, handleClose }) => {
       height: "25px",
       borderRadius:"6px",
       textAlign: 'center',
-      backgroundColor: updatedUser.freeWinGame ? 'green' : 'red', // Set background color based on value
+      backgroundColor: updatedUser.freeWinGame ? 'green' : 'red', 
       outline: 'none',
       transition: 'border 0.3s ease',
     }}
@@ -384,8 +364,6 @@ const SnakeCounterM = ({ user, handleClose }) => {
 >
   Update data
 </button>
-
-
           </tr>
         </tbody>
       </table>
@@ -395,3 +373,7 @@ const SnakeCounterM = ({ user, handleClose }) => {
 };
 
 export default SnakeCounterM;
+
+
+
+

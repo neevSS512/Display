@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import "../styles/playctgdata.scss"; // Ensure you have proper styling here
+import "../styles/playctgdata.scss"; 
 
 const PlayingData = () => {
   const [filteredData, setFilteredData] = useState([]);  // Store filtered data
@@ -109,10 +109,6 @@ const PlayingData = () => {
     newFilteredData[index] = updatedItem;
     setFilteredData(newFilteredData);
   };
-
-
-
-
 
   
   const handleSave = (index) => {

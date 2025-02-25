@@ -45,15 +45,15 @@ const GameUserData = () => {
   };
 
   const handleSearchChange = (e) => {
-    const query = e.target.value;
+    const query = e.target.value.trim();
     setSearch(query);
     // Filter the data based on search query
     if (query) {
       setFilteredData(
         data.filter(
           (item) =>
-            (item.MobileNo && item.MobileNo.toLowerCase().includes(query.toLowerCase())) ||
-            (item.UserName && item.UserName.toLowerCase().includes(query.toLowerCase()))
+            (item.MobileNo && item.MobileNo.toLowerCase().startsWith(query.toLowerCase())) ||
+            (item.UserName && item.UserName.toLowerCase().startsWith(query.toLowerCase()))
         )
       );
     } else {
@@ -91,7 +91,7 @@ const GameUserData = () => {
 
   return (
     <div className="neev">
-      <h3 className="ctr">Game User Details</h3>
+      <h3 className="ug">Game User Details</h3>
       <div className="navbar_search" style={{ position: "relative" }}>
         <input
           type="text"
@@ -142,7 +142,7 @@ const GameUserData = () => {
 
       {/* Display message if results are found */}
       {search && filteredData.length > 0 && (
-        <p style={{ textAlign: "center", color: "green", marginTop: "10px" }}>
+        <p style={{ textAlign: "center", color: "green", marginTop: "10px", }}>
           Found {filteredData.length} {filteredData.length === 1 ? "user" : "users"}. matching your search.
         </p>
       )}
@@ -172,10 +172,26 @@ const GameUserData = () => {
                 <td style={{ padding: "16px", textAlign: "left", borderBottom: "1px solid #ddd" }}>{item.isMobileVerified ? 'Yes' : 'No'}</td>
                 <td style={{ padding: "16px", textAlign: "left", borderBottom: "1px solid #ddd" }}>{item.isBankVerified ? 'Yes' : 'No'}</td>
                 <td style={{ padding: "px", textAlign: "left", borderBottom: "1px solid #ddd" }}>{item.level}</td>
-                <td>   <button
-                  style={{ padding: "7px", border: "1px solid white", textAlign: "left", borderBottom: "1px solid #ddd", color: "white", backgroundColor: "rgb(83, 220, 83)", borderRadius: "18px", margin: "12px" }}>
-                  {item.BlockRemarks}
-                </button></td>
+                <td> 
+                <button
+  style={{
+    backgroundColor: item.BlockRemarks === "Yes" ? 'green' : 'red', // Conditional background color
+    color: 'white',
+    padding: '3px 8px',
+    borderRadius: '5px',
+    textAlign: 'center',
+    width: '48px',  // Set a fixed width for the button
+    minWidth: '28px',
+    display: 'inline-block',
+    fontSize: '15px',
+    margin: '12px',
+    borderBottom: '1px solid #ddd',
+  }}
+>
+  {item.BlockRemarks}
+</button>
+
+                </td>
                <td>
                <button
                   style={{

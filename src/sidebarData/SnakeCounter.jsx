@@ -1,6 +1,4 @@
 
-
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import SnakeCounterM from "../moreInfo/SnakeCounterM";
@@ -12,8 +10,6 @@ const SnakeCounterData = () => {
   const [error, setError] = useState('');
   const [selectedUser, setSelectedUser] = useState(null);
   const [showUserData, setShowUserData] = useState(false);
-
-
   const handleCreateRow = () => {
     const newRow = {
       entryFee: '0',  // String type (according to schema)
@@ -42,13 +38,9 @@ const SnakeCounterData = () => {
       leaderBoardScore: 0, // Number type
       freeWinGame: false, // Boolean type
     };
-  
-    // Add new row to the state
     setFilteredData((prevData) => [newRow, ...prevData]);
   };
   
-
-
 
   // Fetch game user data
   useEffect(() => {
@@ -68,7 +60,6 @@ const SnakeCounterData = () => {
 
   const handleSaveData = async () => {
     try {
-      // Log the filtered data to see the contents of the row before sending
       console.log('Filtered data before saving:', filteredData);
   
       const newRows = filteredData.filter(item => !item._id);
@@ -122,7 +113,7 @@ const SnakeCounterData = () => {
   };
   
 
-  // Update data through the backend
+
   const updateData = async (item) => {
     try {
       // Update data with correct field `_id`
@@ -164,9 +155,6 @@ const SnakeCounterData = () => {
   setFilteredData(newData);
 };
 
-
-
-
 const tableStyles = {
   width: "82vw",
   borderCollapse: "collapse",
@@ -176,9 +164,6 @@ const tableStyles = {
   border: "none", // Ensure no border is applied to the whole table
  
 };
-
-
-
 
   const thStyles = {
     backgroundColor: "black",
@@ -217,8 +202,8 @@ const tableStyles = {
       <h3 className="ctr">Snake Counter
 
 
-      <button className="btn-e" onClick={handleCreateRow} >Create Data</button>
-      <button className="btn-r" onClick={handleSaveData} >Save Data</button>
+      <button className="btn-s" onClick={handleCreateRow} >Create Data</button>
+      <button className="btn-x" onClick={handleSaveData} >Save Data</button>
       </h3>
    
 
@@ -446,8 +431,6 @@ const tableStyles = {
     onBlur={(e) => e.target.style.border = '1px solid transparent'}  // Remove border when focus is lost
   />
 </td>
-
-
                 <td style={tdStyles}>
                   <button
                     style={{
@@ -504,5 +487,4 @@ const tableStyles = {
     </div>
   );
 };
-
 export default SnakeCounterData;

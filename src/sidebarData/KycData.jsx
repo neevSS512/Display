@@ -118,7 +118,6 @@ export default function KycData() {
 
   return (
     <div className='neev'>
-      {/* Aligning h2 and table together */}
       <h3 className='fi'>KYC Details About The User</h3>
 
       {/* Search bar with clear and search icons */}
@@ -131,12 +130,12 @@ export default function KycData() {
           style={{
             padding: "10px 12px",
             fontSize: "14px",
-            width: "50%", // Set width to 100% to make the input expand to the container's width
+            width: "50%",
             backgroundColor: "#f4f4f4",
             color: "#333",
             borderRadius: "20px",
             border: "1px solid #ddd",
-            paddingRight: "40px" // Add space to the right for icons
+            marginLeft:"1px"
           }}
         />
 
@@ -146,7 +145,7 @@ export default function KycData() {
           onClick={handleClearSearch}
           style={{
             position: "absolute",
-            right: "60px", // Adjust position of the clear button
+            right: "60px",
             top: "50%",
             transform: "translateY(-50%)",
           }}
@@ -168,6 +167,7 @@ export default function KycData() {
           <Search sx={{ color: variables.pinkred }} />
         </IconButton>
       </div>
+      
 
       {/* Display message if no users are found */}
       {search && filteredData.length === 0 && (

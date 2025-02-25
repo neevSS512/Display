@@ -91,19 +91,21 @@ const WithdrawData = () => {
   };
 
   const cttStyles = {
-    padding: "8px",
-    border: "1px solid white",
-    textAlign: "left",
-    borderBottom: "1px solid #ddd",
-    color: "white",
-    backgroundColor: "rgb(83, 220, 83)",
-    borderRadius: "10px",
-    margin: "12px"
+    color: 'white',
+    padding: '3px 8px',
+    borderRadius: '5px',
+    textAlign: 'center',
+    minWidth: '28px',
+    display: 'inline-block',
+    fontSize:'15px',
+    margin: '12px',
+    borderBottom: '1px solid #ddd',
+    backgroundColor: 'rgb(101, 216, 101)',
   };
 
   return (
     <div className='neev'>
-      <h3 className='ctr'>Withdraw details</h3>
+      <h3 className='uw'>Withdraw details</h3>
 
       {/* Search bar (same as RechargeData) */}
       <div className="navbar_search" style={{ position: "relative" }}>

@@ -16,9 +16,7 @@
 
 
 h3 {
-  display: flex;
-  justify-content: center;  // Center horizontally
-  align-items: center;      // Center vertically
+  
   border: 1px solid black;
   border-radius: 9px;
   background-color: rgb(221, 221, 221);
@@ -30,10 +28,13 @@ h3 {
 }
 
 .fi {
+  display: flex;
+  justify-content: center;  // Center horizontally
+  align-items: center;      // Center vertically
   padding-top: 2px;         // Adjust the padding if needed
-  width: 1250px;            // Set specific width if necessary
+  width: 82vw;          // Set specific width if necessary
   margin-left: 230px;       // Adjust margin based on your layout
-  text-align: center;
+
 }
 
 .ctr{

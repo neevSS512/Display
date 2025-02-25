@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import "../styles/PoolData.scss"; // Ensure you have proper styling here
+import "../styles/PoolData.scss"; 
 
 const PoolData = () => {
   const [filteredData, setFilteredData] = useState([]);  // Store filtered data
@@ -108,14 +108,6 @@ const PoolData = () => {
     newFilteredData[index] = updatedItem;
     setFilteredData(newFilteredData);
   };
-
-  // Handle saving the data after editing
-  // const handleSave = (index, field) => {
-  //   const updatedItem = filteredData[index];
-  //   handleUpdate(updatedItem._id, updatedItem);
-  //   setEditedRow(null);  // Exit edit mode
-  //   setEditedField("");
-  // };
 
 
 
